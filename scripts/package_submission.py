@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     names = [
         "COURSE_PROJECT_REPORT.tex", "COURSE_PROJECT_REPORT.pdf",
+        "COURSE_PROJECT_SLIDES.tex", "COURSE_PROJECT_SLIDES.pdf",
         "COURSE_PROJECT_REFERENCES.bib", "COURSE_PROJECT_SUMMARY.md",
         "COURSE_PROJECT_PRESENTATION_OUTLINE.md", "COURSE_PROJECT_VERIFICATION.md",
         "REPRODUCIBILITY.md", "REPRODUCIBILITY_ENVIRONMENT.json", "README.md", "requirements.txt",
@@ -26,7 +27,7 @@ def main():
     manifest = "".join(f"{sha256(path.read_bytes()).hexdigest()}  {path.relative_to(ROOT).as_posix()}\n"
                        for path in files)
     manifest_path = ROOT / "REPRODUCIBILITY_MANIFEST.sha256"
-    manifest_path.write_text(manifest, encoding="utf-8")
+    manifest_path.write_text(manifest, encoding="utf-8", newline="\n")
     target = ROOT / "CS886_REPRODUCIBILITY.zip"
     with ZipFile(target, "w", compression=ZIP_DEFLATED) as archive:
         for path in files:

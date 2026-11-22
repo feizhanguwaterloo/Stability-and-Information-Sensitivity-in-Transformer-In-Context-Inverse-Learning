@@ -25,6 +25,20 @@ Alternatively compile with latexmk -pdf COURSE_PROJECT_REPORT.tex. The official 
 
 The asset script reads saved CSV summaries and generates the tables and vector figure under results/course_report/. The root PDF has three main pages followed by references and appendices.
 
+## Rebuild the Beamer presentation
+
+~~~powershell
+.\.venv\Scripts\python.exe scripts/build_slide_assets.py
+tectonic COURSE_PROJECT_SLIDES.tex
+.\.venv\Scripts\python.exe scripts/package_slides.py
+~~~
+
+The deck contains 17 main slides planned for 18 minutes and 5 backup slides.
+Its source includes speaker prompts. COURSE_PROJECT_PRESENTATION_OUTLINE.md
+gives per-slide timing, rehearsal advice and questions to prepare for.
+CS886_BEAMER_SOURCE.zip also compiles independently after extraction and
+can be uploaded to Overleaf with COURSE_PROJECT_SLIDES.tex as the main file.
+
 ## Rerun the experiments
 
 Run these commands in order from the root. E, F and G reuse D's original Transformer checkpoints and the same configuration.

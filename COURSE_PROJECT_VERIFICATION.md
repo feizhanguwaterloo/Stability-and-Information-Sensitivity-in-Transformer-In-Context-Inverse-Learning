@@ -25,6 +25,20 @@ Updated November 21, 2026 against the course assignment screenshot.
 | Archive integrity | The packaging script reopens the ZIP, checks CRCs, and verifies every included file against its source SHA-256 digest. |
 | Experiment scope | Reused the saved experiment outputs. The earlier tests, code and results supply the report's evidence. |
 
+## Presentation verification (November 22, 2026)
+
+- Beamer PDF: 22 pages, comprising 17 main slides and 5 backup slides.
+- The main source has 17 speaker prompts with target times summing to
+  1,080 seconds. Actual delivery time depends on rehearsal.
+- Compiled without LaTeX overfull-box or unresolved-reference warnings.
+  All pages were rendered with Poppler and visually reviewed. Extracted
+  text was also checked to remain within each page's bounds.
+- The standalone Beamer ZIP was CRC-checked, compared byte-for-byte with
+  its inputs, extracted and successfully compiled separately.
+- Presentation plots are generated from the saved D–G summary CSVs.
+  The main proof separates the encoder upper bound from the generic
+  recovery lower bound and states the nontriviality condition.
+
 ## Reproduction
 
 Run from the project root with the existing Python environment and a LaTeX compiler.

@@ -14,4 +14,8 @@ __pycache__/
 *.fdb_latexmk
 *.synctex.gz
 *.xdv
+*.nav
+*.snm
+*.toc
+*.vrb
 

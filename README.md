@@ -5,6 +5,13 @@ three pages of main text. [Report](COURSE_PROJECT_REPORT.pdf) ·
 [Reproducibility instructions](REPRODUCIBILITY.md) ·
 [Submission verification](COURSE_PROJECT_VERIFICATION.md)
 
+The 18-minute presentation follows motivation, methodology, results and
+conclusion, with the stability and recovery proofs in the main talk.
+[Beamer slides](COURSE_PROJECT_SLIDES.pdf) ·
+[LaTeX source](COURSE_PROJECT_SLIDES.tex) ·
+[Standalone Beamer source bundle](CS886_BEAMER_SOURCE.zip) ·
+[Timing and speaking guide](COURSE_PROJECT_PRESENTATION_OUTLINE.md)
+
 This prototype estimates the quadratic costs of two generators from
 dispatch and clearing-price records. It compares a frozen Transformer,
 two classical estimators, and a postprocessing KKT correction on unseen
