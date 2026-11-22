@@ -1,0 +1,50 @@
+{
+  "config": {
+    "seed": 886,
+    "task_counts": [
+      1536,
+      160,
+      256
+    ],
+    "lengths": [
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "regime_context_length": 32,
+    "heldout_demands": 64,
+    "replacement_trials": 4,
+    "batch_size": 48,
+    "epochs": 18,
+    "learning_rate": 0.001,
+    "gamma_grid": [
+      1,
+      10,
+      100,
+      1000
+    ],
+    "device": "auto",
+    "cpu_threads": 4
+  },
+  "best_epoch": 16,
+  "selected_gamma": {
+    "classical-kkt": 1000,
+    "transformer-kkt": 1000,
+    "interior-ridge": 1000
+  },
+  "prior": [
+    1.3237658433169521,
+    1.395530572663698,
+    1.3228604235617458,
+    1.3985515799689796
+  ],
+  "device": "cpu",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "torch": "2.15.0+cpu"
+  }
+}

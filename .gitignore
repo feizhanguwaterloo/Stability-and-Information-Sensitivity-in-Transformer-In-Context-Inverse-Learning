@@ -1,0 +1,17 @@
+__pycache__/
+.venv/
+.deps/
+.mplconfig/
+
+# Local working files and LaTeX compilation intermediates
+/tmp/
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+

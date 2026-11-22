@@ -1,0 +1,21 @@
+{
+  "seeds": [886, 1729, 2027],
+  "lengths": [4, 8, 16, 32, 64],
+  "source_counts": [128, 256, 512, 1024, 1536],
+  "validation_tasks": 96,
+  "test_tasks": 128,
+  "risk_contexts_per_task": 2,
+  "replacement_trials": 4,
+  "info_context_length": 16,
+  "batch_size": 32,
+  "epochs": 14,
+  "learning_rate": 0.001,
+  "device": "cpu",
+  "cpu_threads": 4,
+  "attention_cap": 0.85,
+  "correction_gamma": 1000,
+  "matched_steps_per_epoch": 32,
+  "matched_records": [[1024, 8, 128], [256, 32, 32]],
+  "diversity_tasks": 512,
+  "narrow_source_width": 0.35
+}

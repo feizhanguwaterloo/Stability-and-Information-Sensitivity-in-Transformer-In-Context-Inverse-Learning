@@ -1,0 +1,10 @@
+seed,model,selected_epoch,parameters
+886,transformer,14,67908
+886,norm-controlled,14,67908
+886,deepsets,14,63396
+1729,transformer,14,67908
+1729,norm-controlled,14,67908
+1729,deepsets,14,63396
+2027,transformer,13,67908
+2027,norm-controlled,12,67908
+2027,deepsets,14,63396
