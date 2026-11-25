@@ -105,7 +105,30 @@ def main():
         ax.set(xlabel="Distinct source tasks", ylabel="Unseen relative parameter error", title=title)
         ax.yaxis.set_major_formatter(PercentFormatter(1))
     finish(fig, "transfer")
-    print("Created four vector figures for the Beamer presentation.")
+    # Interpret Theorem 2 using the measured response, rather than the loose C.
+    target_gap = float(np.sqrt(1.6))
+    pair = select(pairs, model="transformer", m=64)
+    mean_delta = float(pair["mean_delta_mean"])
+    larger_error = float(pair["max_absolute_error_mean"])
+    floor = max(0., (target_gap - mean_delta) / 2)
+    raw = [row for row in read("leverage_stability/identifying_pair_raw.csv")
+           if row["model"] == "transformer" and int(row["m"]) == 64]
+    if len(raw) != 3:
+        raise ValueError("Expected three original Transformer checkpoints.")
+    for row in raw:
+        required_error = max(0., (target_gap - float(row["delta"])) / 2)
+        if float(row["max_absolute_error"]) + 1e-6 < required_error:
+            raise ValueError(f"Recorded pair violates the geometric bound: {row['seed']}")
+    macros = {
+        "PairTargetGap": target_gap, "PairMeanDelta": mean_delta,
+        "PairErrorFloor": floor, "PairObservedError": larger_error,
+    }
+    (OUTPUT / "pair_response_check.tex").write_text(
+        "% Derived from G identifying_pair_summary.csv; absolute parameter units.\n"
+        + "".join(r"\newcommand{\%s}{%.3f}" % (name, value) + "\n"
+                  for name, value in macros.items()),
+        encoding="utf-8", newline="\n")
+    print("Created four vector figures and the measured-response theorem check.")
 
 
 if __name__ == "__main__":

@@ -5,10 +5,11 @@ three pages of main text. [Report](COURSE_PROJECT_REPORT.pdf) ·
 [Reproducibility instructions](REPRODUCIBILITY.md) ·
 [Submission verification](COURSE_PROJECT_VERIFICATION.md)
 
-The 18-minute presentation follows motivation, methodology, results and
-conclusion, with the stability and recovery proofs in the main talk.
-[Beamer slides](COURSE_PROJECT_SLIDES.pdf) ·
-[LaTeX source](COURSE_PROJECT_SLIDES.tex) ·
+The 18-minute presentation uses a running identifying-record example to
+connect the research question, stability and recovery proofs, and four
+empirical questions. It has 19 main slides and 8 backup slides.
+[Beamer slides](COURSE_PROJECT_SLIDES_V2.pdf) ·
+[LaTeX source](COURSE_PROJECT_SLIDES_V2.tex) ·
 [Standalone Beamer source bundle](CS886_BEAMER_SOURCE.zip) ·
 [Timing and speaking guide](COURSE_PROJECT_PRESENTATION_OUTLINE.md)
 
