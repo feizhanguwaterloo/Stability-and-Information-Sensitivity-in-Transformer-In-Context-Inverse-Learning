@@ -8,8 +8,8 @@ three pages of main text. [Report](COURSE_PROJECT_REPORT.pdf) ·
 The 18-minute presentation uses a running identifying-record example to
 connect the research question, stability and recovery proofs, and four
 empirical questions. It has 19 main slides and 8 backup slides.
-[Beamer slides](COURSE_PROJECT_SLIDES_V2.pdf) ·
-[LaTeX source](COURSE_PROJECT_SLIDES_V2.tex) ·
+[Beamer slides](COURSE_PROJECT_SLIDES_V3.pdf) ·
+[LaTeX source](COURSE_PROJECT_SLIDES_V3.tex) ·
 [Standalone Beamer source bundle](CS886_BEAMER_SOURCE.zip) ·
 [Timing and speaking guide](COURSE_PROJECT_PRESENTATION_OUTLINE.md)
 

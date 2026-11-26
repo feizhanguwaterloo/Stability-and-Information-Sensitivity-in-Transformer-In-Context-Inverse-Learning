@@ -25,9 +25,9 @@ Updated November 21, 2026 against the course assignment screenshot.
 | Archive integrity | The packaging script reopens the ZIP, checks CRCs, and verifies every included file against its source SHA-256 digest. |
 | Experiment scope | Reused the saved experiment outputs. The earlier tests, code and results supply the report's evidence. |
 
-## Presentation verification (November 24, 2026)
+## Presentation verification (November 25, 2026)
 
-- Revised Beamer PDF (COURSE_PROJECT_SLIDES_V2.pdf): 27 pages, comprising
+- Revised Beamer PDF (COURSE_PROJECT_SLIDES_V3.pdf): 27 pages, comprising
   19 main slides and 8 backup slides. The original source/PDF pair remains available.
 - The main source has 19 speaker prompts with target times summing to
   1,080 seconds. Actual delivery time depends on rehearsal.
@@ -65,3 +65,5 @@ python scripts/package_submission.py
 The previous six-page main-text version and its verification record are retained under docs/archive/. The current root report follows the screenshot's three-page course limit.
 
 [Official ICML 2026 template source](https://icml.cc/Conferences/2026/AuthorInstructions)
+
+V3 retains the narrative and adds a formal finite-length/liminf corollary, explicit concept distinctions, and an architecture/certificate review in COURSE_PROJECT_V3_REVIEW.md.

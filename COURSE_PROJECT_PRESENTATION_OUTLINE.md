@@ -3,7 +3,7 @@
 **Stability and Information Sensitivity in Transformer In-Context Inverse Learning**  
 **Fei Zhang, University of Waterloo**
 
-Version 2: 19 main slides, including the title, followed by 8 backup slides.
+Version 3: 19 main slides, including the title, followed by 8 backup slides.
 The main talk targets 18 minutes, excluding questions. These are rehearsal
 targets, not a measured delivery. English speaking prompts and explicit
 transitions appear in the LaTeX source as \note{...}; the audience PDF
@@ -64,7 +64,7 @@ Theorem 1 是现有论证的架构适配，Theorem 2 是基础必要条件；
 | 4:55-6:10 | 7. Proof 1: bounded attention | Track average row perturbation and explain why bounded attention controls its spreading. |
 | 6:10-7:10 | 8. Proof 1: the constant C | Compose the layer factors. Explain where C comes from and why its numerical value is too loose. |
 | 7:10-8:30 | 9. Theorem 2 and its proof | Walk through the triangle inequality. Return to slopes 1 and 2 and the minimum response 0.8 for error at most 0.1. |
-| 8:30-9:15 | 10. Combine the bounds | Explain the repeated-record worst-case limit and when the lower bound is positive. |
+| 8:30-9:15 | 10. Formal worst-case recovery corollary | State the finite-length error floor and the liminf consequence. Fixed targets, unique identification and one-record replacement hold at every length. |
 | 9:15-10:25 | 11. Valid dispatch construction | Verify that both contexts identify different valid tasks. This exact pair returns in slide 16. |
 | 10:25-11:15 | 12. Experimental questions | State the four questions, comparison models, unseen-task splits and prediction protocol. |
 | 11:15-12:10 | 13. Ordinary replacements | Small response can coexist with accurate recovery when the true task stays fixed. |
@@ -72,7 +72,7 @@ Theorem 1 是现有论证的架构适配，Theorem 2 是基础必要条件；
 | 13:05-14:10 | 15. Matched leverage | Hold the focal record and edit fixed. The background changes model responsiveness. |
 | 14:10-15:25 | 16. Identifying pair | Return to slide 11. Compare directional response and actual endpoint error. |
 | 15:25-16:20 | 17. Interpret measured response | Apply Theorem 2 to observed Delta rather than the loose C/m certificate. |
-| 16:20-17:25 | 18. Contribution and scope | Separate prior reasoning, our concrete work and limitations. |
+| 16:20-17:25 | 18. Three claims and their scope | Separate prior reasoning, our concrete work and limitations. |
 | 17:25-18:00 | 19. Conclusion | Answer the opening question with the strongest supported statement. |
 
 If rehearsal runs long, shorten the protocol and architecture details.
@@ -123,15 +123,15 @@ From the project root:
 
 ~~~powershell
 python scripts/build_slide_assets.py
-tectonic COURSE_PROJECT_SLIDES_V2.tex
+tectonic COURSE_PROJECT_SLIDES_V3.tex
 python scripts/package_slides.py
 ~~~
 
-Alternatively compile with latexmk -pdf COURSE_PROJECT_SLIDES_V2.tex.
+Alternatively compile with latexmk -pdf COURSE_PROJECT_SLIDES_V3.tex.
 The source uses standard Beamer, Latin Modern and TikZ packages.
 The standalone ZIP contains the vector figures and the generated
 pair_response_check.tex input. Upload the ZIP to Overleaf and select
-COURSE_PROJECT_SLIDES_V2.tex as the main file.
+COURSE_PROJECT_SLIDES_V3.tex as the main file.
 
 The asset script reads saved CSVs, rebuilds four figures and computes the
 slide 17 values. It checks the error constraint for each of the three
@@ -141,7 +141,17 @@ models. Figure error bars show SD across three seed means.
 Change \setbeameroption{hide notes} to \setbeameroption{show notes} or
 \setbeameroption{show only notes} to compile speaker notes.
 
-[Slides](COURSE_PROJECT_SLIDES_V2.pdf) ·
-[LaTeX source](COURSE_PROJECT_SLIDES_V2.tex) ·
+[Slides](COURSE_PROJECT_SLIDES_V3.pdf) ·
+[LaTeX source](COURSE_PROJECT_SLIDES_V3.tex) ·
 [Standalone source bundle](CS886_BEAMER_SOURCE.zip) ·
 [Final report](COURSE_PROJECT_REPORT.pdf)
+
+## V3 refinements
+
+The central theoretical statement is the formal corollary on slide 10: for a fixed encoder and individually identifying neighboring contexts with fixed target gap D, the finite-length error floor implies liminf of the larger endpoint error at least D/2. This is a worst-case existence statement.
+
+Slides 14 and 15 distinguish identifiability (unique parameters), conditioning (whole-context constraints), leverage (individual design importance), and model sensitivity (measured response). Slide 15 asks explicitly whether information-dependent sensitivity is sufficient when the true task changes.
+
+Theorem 1, the corollary and the finite-length measurements establish three distinct claims. The loose certificate does not quantify the measured errors or verify an empirical worst-case rate.
+
+[English rehearsal script](COURSE_PROJECT_V3_REHEARSAL.md) contains the nineteen timed speaking prompts. [Review record](COURSE_PROJECT_V3_REVIEW.md) records the architecture and certificate checks.

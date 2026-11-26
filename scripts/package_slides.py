@@ -8,7 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     names = [
-        "COURSE_PROJECT_SLIDES_V2.tex", "COURSE_PROJECT_SLIDES_V2.pdf",
+        "COURSE_PROJECT_SLIDES_V3.tex", "COURSE_PROJECT_SLIDES_V3.pdf",
+        "COURSE_PROJECT_V3_REHEARSAL.md", "COURSE_PROJECT_V3_REVIEW.md",
         "COURSE_PROJECT_PRESENTATION_OUTLINE.md", "requirements.txt",
         "scripts/build_slide_assets.py", "scripts/build_report_assets.py",
         "scripts/package_slides.py",
@@ -18,6 +19,7 @@ def main():
         "results/leverage_stability/identifying_pair_raw.csv",
         "results/leverage_stability/matched_summary.csv",
         "results/task_scaling/risks_summary.csv",
+        "results/leverage_stability/norm_bounds.csv",
         "results/presentation/pair_response_check.tex",
     ]
     names += [f"results/presentation/{name}.pdf" for name in
