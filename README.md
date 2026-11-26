@@ -1,5 +1,11 @@
 # Stability and Information Sensitivity in Transformer In-Context Inverse Learning
 
+[Final presentation](COURSE_PROJECT_SLIDES_FINAL.pdf) ·
+[Final LaTeX](COURSE_PROJECT_SLIDES_FINAL.tex) ·
+[Final speaker notes](COURSE_PROJECT_FINAL_REHEARSAL.md) ·
+[Verified changelog](COURSE_PROJECT_FINAL_CHANGELOG.md) ·
+[Standalone final source](CS886_BEAMER_FINAL_SOURCE.zip)
+
 The course submission uses the official ICML 2026 template with
 three pages of main text. [Report](COURSE_PROJECT_REPORT.pdf) ·
 [Reproducibility instructions](REPRODUCIBILITY.md) ·

@@ -1,0 +1,44 @@
+{
+  "target_gap": 1.2649110640673518,
+  "checkpoints": [
+    {
+      "seed": 886,
+      "r": 0.5383076965808867,
+      "delta": 0.6815995,
+      "directional_bound": 0.2919998513947886,
+      "euclidean_bound": 0.29165578203367587,
+      "error_a": 0.3825772283364647,
+      "error_b": 0.23149796957937377,
+      "maximum_endpoint_error": 0.3825772283364647
+    },
+    {
+      "seed": 1729,
+      "r": 0.43819645047187794,
+      "delta": 0.5583583,
+      "directional_bound": 0.35531576281521604,
+      "euclidean_bound": 0.3532763820336759,
+      "error_a": 0.4461224751965875,
+      "error_b": 0.27222655747676916,
+      "maximum_endpoint_error": 0.4461224751965875
+    },
+    {
+      "seed": 2027,
+      "r": 0.44439285993576044,
+      "delta": 0.5677533,
+      "directional_bound": 0.3513968093710377,
+      "euclidean_bound": 0.3485788820336759,
+      "error_a": 0.46610466489067875,
+      "error_b": 0.2473806164899564,
+      "maximum_endpoint_error": 0.46610466489067875
+    }
+  ],
+  "checkpoint_means": {
+    "directional_bound": 0.3329041411936808,
+    "euclidean_bound": 0.33117034870034256,
+    "maximum_endpoint_error": 0.4316014561412436,
+    "r": 0.4736323356628417
+  },
+  "averaging": "mean_j(max(e_Aj,e_Bj)); not max(mean_j(e_Aj),mean_j(e_Bj))",
+  "tolerance": 1e-06,
+  "source": "results/leverage_stability/identifying_pair_raw.csv"
+}
